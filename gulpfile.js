@@ -6,7 +6,6 @@ var istanbul = require('gulp-istanbul');
 var mocha = require('gulp-mocha');
 var chalk = require('chalk');
 var rimraf = require('rimraf');
-var coveralls = require('gulp-coveralls');
 var eslint = require('gulp-eslint');
 var _ = require('lodash');
 
@@ -108,14 +107,9 @@ gulp.task('clean-coverage', function (done) {
 });
 
 gulp.task('ci', function (done) {
-    runSequence('validate', 'coveralls', 'test-without-coverage', done);
+    runSequence('validate', 'test-without-coverage', done);
 });
 
 gulp.task('ci-no-cov', function (done) {
     runSequence('validate', 'test-without-coverage', done);
-});
-
-gulp.task('coveralls', function () {
-    return gulp.src('coverage/**/lcov.info')
-        .pipe(coveralls());
 });

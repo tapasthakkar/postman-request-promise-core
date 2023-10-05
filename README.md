@@ -25,10 +25,10 @@ npm install --save postman-request-promise-core
 // 1. Load the request library
 
 // Only use a direct require if you are 100% sure that:
-// - Your project does not use request directly. That is without the Promise capabilities by calling require('request').
+// - Your project does not use request directly. That is without the Promise capabilities by calling require('postman-request').
 // - Any of the installed libraries use request.
 // ...because Request's prototype will be patched in step 2.
-/* var request = require('request'); */
+/* var request = require('postman-request'); */
 
 // Instead use:
 var stealthyRequire = require('stealthy-require');
