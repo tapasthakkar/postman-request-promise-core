@@ -1,15 +1,4 @@
-<a href="http://promisesaplus.com/">
-    <img src="https://promises-aplus.github.io/promises-spec/assets/logo-small.png" align="right" alt="Promises/A+ logo" />
-</a>
-
 # request-promise-core
-
-[![Gitter](https://img.shields.io/badge/gitter-join_chat-blue.svg?style=flat-square&maxAge=2592000)](https://gitter.im/request/request-promise?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Build Status](https://img.shields.io/travis/request/promise-core/master.svg?style=flat-square&maxAge=2592000)](https://travis-ci.org/request/promise-core)
-[![Coverage Status](https://img.shields.io/coveralls/request/promise-core.svg?style=flat-square&maxAge=2592000)](https://coveralls.io/r/request/promise-core)
-[![Dependency Status](https://img.shields.io/david/request/promise-core.svg?style=flat-square&maxAge=2592000)](https://david-dm.org/request/promise-core)
-[![Known Vulnerabilities](https://snyk.io/test/npm/promise-core/badge.svg?style=flat-square&maxAge=2592000)](https://snyk.io/test/npm/promise-core)
-
 
 This package is the core for the following packages:
 
