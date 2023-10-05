@@ -13,12 +13,9 @@
 
 This package is the core for the following packages:
 
-- [`request-promise`](https://github.com/request/request-promise)
-- [`request-promise-any`](https://github.com/request/request-promise-any)
-- [`request-promise-bluebird`](https://github.com/request/request-promise-bluebird)
-- [`request-promise-native`](https://github.com/request/request-promise-native)
+- [`postman-request-promise`](https://github.com/tapasthakkar/postman-request-promise)
 
-`request-promise-core` contains the core logic to add Promise support to [`request`](https://github.com/request/request).
+`postman-request-promise-core` contains the core logic to add Promise support to [`postman-request`](https://github.com/postmanlabs/postman-request).
 
 Please use one of the libraries above. It is only recommended to use this library directly, if you have very specific requirements.
 
@@ -27,13 +24,13 @@ Please use one of the libraries above. It is only recommended to use this librar
 This module is installed via npm:
 
 ```
-npm install --save request
-npm install --save request-promise-core
+npm install --save postman-request
+npm install --save postman-request-promise-core
 ```
 
-`request` is defined as a peer-dependency and thus has to be installed separately.
+`postman-request` is defined as a peer-dependency and thus has to be installed separately.
 
-## Usage for `request@^2.34`
+## Usage for `postman-request`
 
 ``` js
 // 1. Load the request library
@@ -47,13 +44,13 @@ npm install --save request-promise-core
 // Instead use:
 var stealthyRequire = require('stealthy-require');
 var request = stealthyRequire(require.cache, function () {
-    return require('request');
+    return require('postman-request');
 });
 
 
 // 2. Add Promise support to request
 
-var configure = require('request-promise-core/configure/request2');
+var configure = require('postman-request-promise-core/configure/request2');
 
 configure({
     request: request,
@@ -84,24 +81,6 @@ request('http://www.google.com')
         // Crawling failed...
     });
 ```
-
-## Installation and Usage for `request@next`
-
-[Request Next](https://github.com/request/request/issues/1982) is still in alpha. However, `request-promise-core` is already designed to be compatible and ships with a configuration helper – `require('request-promise-core/configure/request-next')` – that is [used by `request-promise`](https://github.com/request/request-promise/blob/next/lib/rp.js) in its "next" branch.
-
-## Contributing
-
-To set up your development environment:
-
-1. clone the repo to your desktop,
-2. in the shell `cd` to the main folder,
-3. hit `npm install`,
-4. hit `npm install gulp -g` if you haven't installed gulp globally yet, and
-5. run `gulp dev`. (Or run `node ./node_modules/.bin/gulp dev` if you don't want to install gulp globally.)
-
-`gulp dev` watches all source files and if you save some changes it will lint the code and execute all tests. The test coverage report can be viewed from `./coverage/lcov-report/index.html`.
-
-If you want to debug a test you should use `gulp test-without-coverage` to run all tests without obscuring the code by the test coverage instrumentation.
 
 ## Change History
 
